@@ -1,26 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import NavBar from './components/NavBar';
+import { MdExtension } from 'react-icons/md';
+import { MdInfo } from 'react-icons/md';
+
+const items = [
+  { label: 'Logic', icon: <MdExtension /> },
+  { label: 'Info', icon: <MdInfo /> },
+];
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return <NavBar items={items} />;
 }
 
 export default App;
